@@ -28,17 +28,18 @@ header {
   margin: 0 auto;
 }
 
-header h1 {
+h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-header h2 {
+h2 {
   font-size: 1.5rem;
   font-weight: normal;
   margin-bottom: 1rem;
 }
+
 
 .paw-prints {
   display: flex;
@@ -330,35 +331,6 @@ header h2 {
   background-color: #6d4c2b;
 }
 
-/* Footer Styles */
-footer {
-  background-color: #6d4c2b;
-  color: white;
-  text-align: center;
-  padding: 2rem 0;
-  margin-top: 2rem;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.social-links {
-  margin-bottom: 1rem;
-}
-
-.social-links a {
-  color: white;
-  font-size: 1.5rem;
-  margin: 0 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #f8d7a3;
-  transform: translateY(-3px);
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -840,3 +812,410 @@ footer {
       max-width: 95%;
   }
 }
+
+/*Finances to Consider Styling*/
+/* Comparison Table Styles */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem auto;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 1000px;
+}
+
+.comparison-table thead tr {
+  background-color: #8b5a2b;
+  color: white;
+}
+
+.comparison-table th {
+  padding: 15px;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.comparison-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #f0e6d6;
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+  background-color: #f9f5f0;
+}
+
+/* Pros and Cons styling */
+.pros {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.cons {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.highlight {
+  background-color: #f8d7a3;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .comparison-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .comparison-table thead,
+  .comparison-table tbody,
+  .comparison-table th,
+  .comparison-table td,
+  .comparison-table tr {
+    display: block;
+  }
+  
+  .comparison-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .comparison-table tr {
+    border: 1px solid #f0e6d6;
+    margin-bottom: 1rem;
+  }
+  
+  .comparison-table td {
+    border: none;
+    border-bottom: 1px solid #f0e6d6;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align: left;
+  }
+  
+  .comparison-table td:before {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-title);
+    font-weight: bold;
+    color: #6d4c2b;
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #6d4c2b;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-links {
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #f8d7a3;
+  transform: translateY(-3px);
+}
+
+/* Oreo's Story */
+/* Timeline */
+.timeline{
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.timeline::after{
+  content: '';
+  position:absolute;
+  width: 10px;
+  background-color: saddlebrown;
+  top:0;
+  bottom:0;
+  left: 50%;
+  margin-left: -3px;
+}
+.container{
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.container::after{
+  content:'';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: beige;
+  border: 4px solid saddlebrown;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.container::before{
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  
+}
+.left{
+  left:0;
+}
+.right{
+  left: 50%;
+}
+/*arrows for the texts */
+.left::before{
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border:medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+.right::before{
+  content: " ";
+  height:0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index:1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+.right::after{
+  left: -16px;
+}
+.content{
+  padding: 20px 30px;
+  background-color: transparent;
+  position:relative;
+  border-radius: 6px;
+}
+@media screen and (max-width: 600px){
+  .timeline::after{
+    left: 31px;
+  }
+}
+.left::after,.right::after{
+  left:20px;
+}
+/*Image Styling */
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 200px;
+}
+
+img:hover {
+  box-shadow: 0 0 4px 1px rgba(226, 86, 4, 0.986);
+}
+
+/*Puppy Essentials Section */
+.checklist-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .progress-container {
+            margin-bottom: 25px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .progress-bar {
+            height: 20px;
+            background: #e0d0b1;
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.5s ease;
+            margin-top: 10px;
+            position: relative;
+        }
+        
+        .progress-text {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 5px;
+            color: #5d4037;
+        }
+        
+        .checklist-item {
+            margin-bottom: 15px;
+            border: 1px solid #e0d0b1;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fffaf5;
+        }
+        
+        .item-header {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .item-header:hover {
+            background-color: #f5eee6;
+        }
+        
+        .item-checkbox {
+            margin-right: 15px;
+            transform: scale(1.3);
+            accent-color: #8d6e63;
+        }
+        
+        .item-title {
+            flex-grow: 1;
+            font-weight: bold;
+            color: #5d4037;
+        }
+        
+        .item-price {
+            background-color: #8d6e63;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        
+        .item-details {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: white;
+        }
+        
+        .checklist-item input[type="checkbox"]:checked ~ .item-details {
+            max-height: 500px;
+            padding: 0 15px 15px 15px;
+            border-top: 1px dashed #e0d0b1;
+        }
+        
+        .item-details p {
+            margin: 10px 0;
+        }
+        
+        .item-details ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .priority {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .priority.high {
+            background-color: #ffcdd2;
+            color: #c62828;
+        }
+        
+        .priority.medium {
+            background-color: #fff9c4;
+            color: #f57f17;
+        }
+        
+        .priority.low {
+            background-color: #c8e6c9;
+            color: #2e7d32;
+        }
+        
+        .product-recs {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .product-card {
+            width: 120px;
+            text-align: center;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid #e0d0b1;
+        }
+        
+        .product-name {
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+        
+        .completion-message {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            
+            .item-header {
+                flex-wrap: wrap;
+            }
+            
+            .item-price {
+                margin: 5px 0 0 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .product-recs {
+                justify-content: center;
+            }
+        }
