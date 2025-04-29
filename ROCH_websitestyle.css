@@ -961,6 +961,65 @@ footer {
   left: 50%;
   margin-left: -3px;
 }
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #f8d7a3;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 1;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline .container {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline .container::after {
+  content: '\f1b0'; /* FontAwesome paw icon */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 4px solid #f8d7a3;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  color: #8b5a2b;
+  font-size: 16px;
+  z-index: 2;
+}
+
+.timeline .left::after {
+  left: -15px;
+}
+
+.timeline .right::after {
+  right: -15px;
+}
+
+/* Adjust content positioning */
+.timeline .content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 2px solid #f8d7a3;
+}
 .container{
   padding: 10px 40px;
   position: relative;
@@ -1094,29 +1153,29 @@ img:hover {
   transition: background-color 0.3s;
 }
         
-        .item-header:hover {
-            background-color: #f5eee6;
-        }
+.item-header:hover {
+  background-color: #f5eee6;
+}
         
-        .item-checkbox {
-            margin-right: 15px;
-            transform: scale(1.3);
-            accent-color: #8d6e63;
-        }
+.item-checkbox {
+  margin-right: 15px;
+  transform: scale(1.3);
+  accent-color: #8d6e63;
+}
         
-        .item-title {
-            flex-grow: 1;
-            font-weight: bold;
-            color: #5d4037;
-        }
+.item-title {
+  flex-grow: 1;
+  font-weight: bold;
+  color: #5d4037;
+}
         
-        .item-price {
-            background-color: #8d6e63;
-            color: white;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.9em;
-            margin-left: 10px;
+.item-price {
+  background-color: #8d6e63;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  margin-left: 10px;
         }
         
         .item-details {
