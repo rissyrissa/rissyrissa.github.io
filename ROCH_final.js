@@ -155,9 +155,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 //Interactivty for Timeline for Oreo's Story HTML
-
 function setupTimeline() {
-    // Read more functionality
     document.querySelectorAll('.read-more').forEach(button => {
         button.addEventListener('click', function() {
             const moreContent = this.nextElementSibling;
