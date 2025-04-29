@@ -24,22 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Mobile Menu Toggle
-function setupMobileMenu() {
-    // This would be used if you add a mobile menu button later
-    const mobileMenuButton = document.createElement('button');
-    mobileMenuButton.className = 'mobile-menu-button';
-    mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
-    
-    const nav = document.querySelector('.topnav');
-    if (nav) {
-        nav.parentNode.insertBefore(mobileMenuButton, nav);
-        
-        mobileMenuButton.addEventListener('click', function() {
-            nav.classList.toggle('active');
-        });
-    }
-}
 
 // Image Modal Functionality
 function setupImageModal() {
