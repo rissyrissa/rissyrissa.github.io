@@ -1048,51 +1048,51 @@ img:hover {
 
 /*Puppy Essentials Section */
 .checklist-container {
-            background-color: white;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
         
-        .progress-container {
-            margin-bottom: 25px;
-            background: #f5f5f5;
-            border-radius: 10px;
-            padding: 15px;
-        }
+.progress-container {
+   margin-bottom: 25px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 15px;
+  }
         
-        .progress-bar {
-            height: 20px;
-            background: #e0d0b1;
-            border-radius: 10px;
-            width: 0%;
-            transition: width 0.5s ease;
-            margin-top: 10px;
-            position: relative;
-        }
+.progress-bar {
+  height: 20px;
+  background: #e0d0b1;
+  border-radius: 10px;
+  width: 0%;
+  transition: width 0.5s ease;
+  margin-top: 10px;
+  position: relative;
+  }
         
-        .progress-text {
-            text-align: center;
-            font-weight: bold;
-            margin-top: 5px;
-            color: #5d4037;
-        }
+.progress-text {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #5d4037;
+}
         
-        .checklist-item {
-            margin-bottom: 15px;
-            border: 1px solid #e0d0b1;
-            border-radius: 8px;
-            overflow: hidden;
-            background-color: #fffaf5;
-        }
+.checklist-item {
+  margin-bottom: 15px;
+  border: 1px solid #e0d0b1;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fffaf5;
+}
         
-        .item-header {
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+.item-header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
         
         .item-header:hover {
             background-color: #f5eee6;
@@ -1219,3 +1219,14 @@ img:hover {
                 justify-content: center;
             }
         }
+/*Styling for the Videos */
+.containsvideos{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+@media (max-width:768px) {
+  .video-container{
+    grid-template-columns: 1fr;
+  }
+}
