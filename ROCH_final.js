@@ -79,7 +79,7 @@ function setupGallery() {
     });
 }
 
-// Testimonial Carousel
+// Testimonial on Index
 function setupTestimonialCarousel() {
     const testimonials = document.querySelectorAll('.testimonial');
     const prevBtn = document.getElementById('prev-testimonial');
@@ -100,12 +100,6 @@ function setupTestimonialCarousel() {
         currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
         showTestimonial(currentIndex);
     });
-    
-    // Auto-rotate testimonials every 5 seconds
-    setInterval(function() {
-        currentIndex = (currentIndex + 1) % testimonials.length;
-        showTestimonial(currentIndex);
-    }, 5000);
     
     function showTestimonial(index) {
         testimonials.forEach((testimonial, i) => {
