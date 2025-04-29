@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
 // Image Modal Functionality
 function setupImageModal() {
     const modal = document.getElementById('imageModal');
