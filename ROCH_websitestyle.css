@@ -1098,7 +1098,7 @@ img {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
-  width: 200px;
+  width: 300px;
 }
 
 img:hover {
@@ -1282,10 +1282,10 @@ img:hover {
 .containsvideos{
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  gap: 20px;
+  gap: 50px;
 }
 @media (max-width:768px) {
   .video-container{
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
   }
 }
