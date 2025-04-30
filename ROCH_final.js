@@ -1,13 +1,10 @@
 // DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', function() {
-    
     // Mobile menu toggle (if needed)
     setupMobileMenu();
     
     // Image modal functionality
     setupImageModal();
-
-    setupTestimonialCarousel();
     
     // Testimonial carousel (for index.html)
     if (document.querySelector('.testimonial-carousel')) {
@@ -23,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.gallery-grid')) {
         setupGallery();
     }
-    
 });
 
 // Image Modal Functionality
@@ -35,8 +31,12 @@ function setupImageModal() {
     const captionText = document.getElementById('imgCaption');
     const closeModal = document.querySelector('.close-modal');
     
-    
     if (!modalImg || !captionText || !closeModal) return;
+    
+    // Close modal when clicking X
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
     
     // Close modal when clicking outside the image
     modal.addEventListener('click', function(e) {
