@@ -63,57 +63,48 @@ function setupGallery() {
     });
 }
 
-// Testimonial on Index
-function setupTestimonialCarousel() {
-    const testimonials = document.querySelectorAll('.testimonial');
-    const prevBtn = document.getElementById('prev-testimonial');
-    const nextBtn = document.getElementById('next-testimonial');
-    let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    // Testimonial Carousel
+    if (document.querySelector('.testimonial-carousel')) {
+        const testimonials = document.querySelectorAll('.testimonial');
+        const prevBtn = document.getElementById('prev-testimonial');
+        const nextBtn = document.getElementById('next-testimonial');
+        let currentIndex = 0;
+        
+        function showTestimonial(index) {
+            testimonials.forEach((t, i) => {
+                t.classList.toggle('active', i === index);
+            });
+        }
+        
+        if (prevBtn) prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentIndex);
+        });
+        
+        if (nextBtn) nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(currentIndex);
+        });
+        
+        showTestimonial(0);
+    }
     
-    // Show initial testimonial
-    showTestimonial(currentIndex);
-    
-    // Next testimonial
-    nextBtn.addEventListener('click', function() {
-        currentIndex = (currentIndex + 1) % testimonials.length;
-        showTestimonial(currentIndex);
-    });
-    
-    // Previous testimonial
-    prevBtn.addEventListener('click', function() {
-        currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-        showTestimonial(currentIndex);
-    });
-    
-    function showTestimonial(index) {
-        testimonials.forEach((testimonial, i) => {
-            testimonial.classList.remove('active');
-            if (i === index) {
-                testimonial.classList.add('active');
+    // Newsletter Form
+    const newsletterForm = document.getElementById('newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            if (email && email.includes('@')) {
+                alert('Thank you for subscribing!');
+                this.reset();
+            } else {
+                alert('Please enter a valid email.');
             }
         });
     }
-}
-
-// Newsletter Form
-function setupNewsletterForm() {
-    const form = document.getElementById('newsletter-form');
-    
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const emailInput = this.querySelector('input[type="email"]');
-        const email = emailInput.value;
-        
-        // Simple validation
-        if (email && email.includes('@')) {
-            // In a real application, you would send this to a server
-            alert('Thank you for subscribing to our newsletter!');
-            emailInput.value = '';
-        } else {
-            alert('Please enter a valid email address.');
-        }
-    });
-}
+});
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
