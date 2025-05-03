@@ -1295,7 +1295,7 @@ img:hover {
   justify-content: center;
 }
 
-.video iframe {
+.video embed {
   max-width: 100%;
   height: 315px;
   border-radius: 10px;
@@ -1308,13 +1308,13 @@ img:hover {
     gap: 30px;
   }
   
-  .video iframe {
+  .video embed {
     height: 250px;
   }
 }
 
 @media (max-width: 480px) {
-  .video iframe {
+  .video embed {
     height: 200px;
   }
 }
