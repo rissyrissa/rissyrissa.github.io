@@ -1,16 +1,20 @@
 /*Homepage Styling*/
-/* Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
 }
-
 body {
   background-color: #f9f5f0;
   color: #333;
   line-height: 1.6;
+}
+/*Homepage Image Styling */
+.homepagephoto{
+  display: block;
+  margin: auto;
+  width:80%;
 }
 
 /* Header Styles */
@@ -384,12 +388,6 @@ h2 {
     color: white;
 }
 
-/*Homepage Image Styling */
-.homepagephoto{
-  display: block;
-  margin: auto;
-  width:80%;
-}
 
 /*Text Styling */
 .introduction p{
